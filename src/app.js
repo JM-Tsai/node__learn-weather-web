@@ -24,8 +24,11 @@ const publicJs = join(__dirname, '../public/js')
 const viewPath = join(__dirname, '../templates/views')
 const partialsPath = join(__dirname, '../templates/partials')
 
-// console.log(__dirname); // 目錄名
-// console.log(publicDirname); // 文件名
+// 端口處理
+// 設置一個變數儲存 PORT 
+// env 是一個process的物件，後續接的 .PORT 必須為大寫
+// || 3000 前方接收不到就用 本地端口
+const port = process.env.PORT || 3000
 
 // 創建一個變數儲存 express 應用程式，並使用 express 本身提供的各種方法
 // 下方使用的 .get() 之類的
@@ -142,7 +145,7 @@ app.get('*', (req, res) => {
 })
 
 // 能啟動伺服器並且監聽特定端口，以回應請求與響應。
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.');
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`);
 })
 

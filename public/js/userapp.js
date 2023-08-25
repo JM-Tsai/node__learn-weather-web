@@ -25,7 +25,7 @@ weatherForm.addEventListener('submit', (e) => {
     // 提交後清除文本
     locSearch.value = ''
     errorText.textContent = ''
-    fetch(`http://localhost:3000/weather?address=${address}`).then((response) => {
+    fetch(`/weather?address=${address}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 errorText.textContent = data.error
@@ -35,5 +35,8 @@ weatherForm.addEventListener('submit', (e) => {
             }
         })
     })
-    
+
+    if (body.current.precip >= 50) {
+        
+    }
 })
