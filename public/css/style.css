@@ -1,0 +1,161 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+a,
+a:visited {
+    color: black;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: rgb(180, 131, 226);
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3rem;
+    box-sizing: border-box; 
+    width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 3px;
+    border-bottom: 1px solid rgb(158, 213, 235);
+
+    & h1 {
+        font-size: 3rem;
+    }
+}
+.header__link {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & a {
+        color: rgba(107, 105, 105, 0.808);
+        font-weight: bold;
+        transition: all 0.2s linear;
+
+        &:hover {
+            transform: scale(1.05)
+        }
+    }
+
+    & :first-child {
+        padding-left: 10px;
+    }
+
+    & :last-child {
+        padding-right: 10px;
+    }
+}
+
+.main {
+    margin-top: 2rem;
+    padding-left: 10px;
+    padding: 1rem;
+    width: 600px;
+    height: 70vh;
+    border: 1px slategray;
+    /* border-bottom: 1px solid rgb(158, 213, 235); */
+} 
+
+.resFoecast {
+    margin-top: 2rem;
+    
+    & h4 {
+        margin: 1rem 0;
+    }
+
+    & p {
+        height: 1.5rem;
+        border-bottom: 2px solid rgb(158, 213, 235);
+        transition: all 2s ease; 
+    }
+}
+
+.errorText {
+    color: red;
+    height: 1rem;
+    font-weight: 600;
+    margin-top: 5px;
+
+}
+.errorImg {
+    width: 100%;
+    text-align: center;    
+}
+
+.adBox {
+    position: fixed;
+    right: 10rem;
+    top: 25%;
+}
+
+.adBox--img1 {
+    width: 220px;
+    height: 500px;
+    border: 1px  purple;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        cursor: pointer;
+    }
+}
+
+footer {
+    margin-top: 1rem;
+    border-top: 1px solid rgb(158, 213, 235);
+
+    & p {
+        text-align: center;
+    }
+}
+
+.footer__textbox {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form {
+    border-radius: 10px;
+    margin-top: 10px
+}
+
+.locSearch {
+
+    width: 15rem;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+button {
+    width: 5rem;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    border: 1px solid rgba(92, 92, 92, 0.932);
+    background-color: rgba(92, 92, 92, 0.932);
+    font-weight: bold;
+    transition: all 0.2s linear;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 3px 3px 6px gray;
+        transform: translateY(-0.5px);
+    }
+
+}
