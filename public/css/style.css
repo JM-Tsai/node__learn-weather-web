@@ -59,14 +59,28 @@ header {
 }
 
 .main {
+    font-weight: bold;
+    margin: 0 auto;
     margin-top: 2rem;
     padding-left: 10px;
     padding: 1rem;
     width: 600px;
     height: 70vh;
     border: 1px slategray;
-    /* border-bottom: 1px solid rgb(158, 213, 235); */
+
+    & p {
+        line-height: 2;
+    }
 } 
+
+.linkBox {
+    margin-top: 2rem;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 .resFoecast {
     margin-top: 2rem;
@@ -98,6 +112,21 @@ header {
     position: fixed;
     right: 10rem;
     top: 25%;
+}
+
+.indexAD {
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    box-shadow: 5px 5px 10px gray;
+    transition: all 0.3s ease;
+
+    &:hover {
+         transform:  scale(1.01);
+         box-shadow: 3px 3px 5px gray;
+    }
+
 }
 
 .adBox--img1 {
